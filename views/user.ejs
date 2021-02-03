@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        table,th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Marksheet</h1>
+    <table>
+        <tr>
+            <th>Sl.No</th>
+            <th>Rollnumber</th>
+            <th>Student Name</th>
+            <th>Test1</th>
+            <th>Test2</th>
+            <th>Test3</th>
+            <th>Average Score</th>
+        </tr>
+        <% if(userdata.length!=0){ %>
+            <% userdata.forEach(function(data) { %>
+                <% var i=1; %>
+                <tr>
+                    <td><%= i; %></td>
+                    <td><%=data.rollnumber %></td>
+                    <td><%=data.username %></td>
+                    <td><%=data.mark1 %></td>
+                    <td><%=data.mark2 %></td>
+                    <td><%=data.mark3 %></td>
+                    <td><%= Math.round((data.mark1 + data.mark2 + data.mark3)/3) %></td>
+                </tr>
+                <% i++; })%>
+        <% } else{ %>
+         <tr>
+             <td colspan="6">No data is found</td>
+         </tr>   
+
+        <% } %>   
+    </table>
+</body>

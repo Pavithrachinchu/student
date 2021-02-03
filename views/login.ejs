@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Login page</title>
+<style>
+body{
+background:linear-gradient(to right,#add100,#7b920a);
+padding:50px 80px 70px 150px;
+}
+.sub{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+background-color:blue;
+border-radius:50px;
+width:900px;
+height:400px;
+padding:50px 80px 50px 10px;
+background:linear-gradient(to bottom right,#76b852,#8dc26f);
+}
+.row{
+display:flex;
+}
+.col{
+flex:50%;
+padding:50px 70px 50px 90px;
+}
+.a{
+padding:2px 0px 0px 2px;
+}
+img{
+padding:0px 0px 0px 60px;
+height:250px;
+flex:50%;
+}
+input[type=text]{
+height:25px;
+width:200px;
+border-radius:20px;
+border:none;
+}
+input[type=email]{
+height:25px;
+width:200px;
+border-radius:20px;
+border:none;
+}
+input[type=password]{
+height:25px;
+width:200px;
+border-radius:20px;
+border:none;
+}
+button{
+color:red;
+height:25px;
+width:100px;
+border-radius:10px;
+border:none;
+background:linear-gradient(to bottom right,#834d9b,#d04ed6);
+}
+</style>
+</head>
+<body>
+    <div id="page">
+<div class="sub">
+<div class="row">
+<div class="col">
+<img src="https://miro.medium.com/max/1980/0*HICLyAdNSIyT0ODU.jpg" class="img">
+</div>
+<div class="col">
+<h1 style="text-align:center">Student Login</h1>
+<form method="POST" action='/validate'>
+<div><input type="email" placeholder="Email" id="id" name="Email" required></div><br>
+<div><input type="password" placeholder="Password" id="pswd" name="password" required></div><br>
+<div>&emsp;&emsp;&emsp;&emsp;<button id="check"><b>Submit</b></button></div>
+</form>
+<script src="login page.js"></script>
+</div>
+</div>
+</div>
+</body>
+</html>
